@@ -2,7 +2,7 @@
 body {
     font-family: 'Lato', sans-serif;
     /*background-color: #d8e2dc;  #f3f1e4;  Cream color */
-    background-image: url('assets/background-jwst-deep-field.png');
+    background-image: url('assets/background-jwst-deep-field.jpeg');
     color: black; /* Black text */
     margin: 0;
     padding: 0;
@@ -17,6 +17,7 @@ header, footer {
     background-color: #4b0082;
     opacity: 80%;
     color: white;
+    z-index: 0;
     text-align: center;
     padding: 10px 0;
 }
@@ -52,7 +53,8 @@ padding: 0 20px;
     margin-top: 60px; /* Add some space above the tagline */
 }
 .fixed-bottom-right {
-    position: fixed;
+    position: absolute;
+    z-index: 999;
     font-size: 30px;
     color: white;
     bottom: 10px; /* Distance from the bottom of the viewport */
@@ -216,6 +218,7 @@ footer {
     font-size: 0.8em;
     text-align: center;
     padding: 10px;
+    z-index: 0;
 }
 
 .resources a {
