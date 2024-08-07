@@ -12,7 +12,7 @@ body {
 
 header, footer {
     background-color: #4b0082;
-    opacity: 80%;
+    opacity: 100%;
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -210,7 +210,7 @@ footer {
 .wrapped-figure {
     margin-left: auto;
     z-index: 2;
-    max-width: 20%;
+    max-width: 35%;
     animation: fadeInLeft 1s ease-in-out;
 }
 
