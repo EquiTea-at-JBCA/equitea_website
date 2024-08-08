@@ -120,7 +120,27 @@ nav a {
 }
 
 nav a:hover {
-    color: #f3f1e4;
+    color: #A098B5;
+}
+
+/* Change the default color of all hyperlinks */
+a {
+    color: #2C3860; /* Replace with your desired color */
+}
+
+/* Change the color when the link is hovered over */
+a:hover {
+    color: #717da5; /* Replace with your desired hover color */
+}
+
+/* Change the color when the link is clicked (active state) */
+a:active {
+    color: #717da5; /* Replace with your desired active color */
+}
+
+/* Change the color for visited links */
+a:visited {
+    color: #37417B; /* Replace with your desired visited color */
 }
 
 main {
@@ -265,6 +285,17 @@ section::after {
 .about-text {
     flex: 1;
 }
+.pquote {
+    font-family: 'Georgia', serif; /* A classic serif font for quotes */
+    font-size: 1.5em; /* Large font for emphasis */
+    line-height: 1.6; /* Comfortable line spacing */
+    margin: 20px 0; /* Vertical margin to space it out */
+    padding: 20px;
+    color: #555; /* Dark gray text */
+    border-left: 5px solid #2C3860; /* Bold left border to distinguish the quote */
+    background: #f9f9f9; /* Light gray background */
+    position: relative;
+}
 
 .tx-ind {
     margin-left: 20px;
@@ -354,6 +385,12 @@ section::after {
         padding: 0 5%;
     }
 
+    .pquote {
+        font-size: 1.2em; /* Smaller font on smaller screens */
+        padding: 15px;
+        margin: 15px 0;
+    }
+
     .header-content {
         max-width: 400px;
         padding: 0 5px;
@@ -400,6 +437,12 @@ section::after {
     .header-content .small-tagline {
         font-size: 0.8em;
         margin-top: 0.2em;
+    }
+
+    .pquote {
+        font-size: 1em; /* Even smaller font for very small screens */
+        padding: 10px;
+        margin: 10px 0;
     }
 
     .wrapped-figure{
