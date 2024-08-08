@@ -30,7 +30,7 @@ header, footer {
     align-items: center;
     text-align: left;
     color: white;
-    padding: 0 10%;
+    padding: 0 5%;
     box-sizing: border-box;
 }
 
@@ -47,8 +47,8 @@ header, footer {
 }
 
 .header-content .tagline {
-    font-size: 0.5em;
-    margin-top: 100px;
+    font-size: 1.5em;
+    margin-top: 250px;
 }
 
 .header-content .small-tagline {
@@ -224,7 +224,11 @@ footer {
 }
 
 .wrapped-figure {
-    margin-left: auto;
+    align-self: flex-end;
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    margin: 0;
     z-index: 2;
     max-width: 25%;
     animation: fadeInLeft 1s ease-in-out;
@@ -232,7 +236,7 @@ footer {
 
 .wrapped-figure img {
     object-fit: cover;
-    align-items: right;
+    align-items: bottom;
     opacity: 100%;
     z-index: 2;
     max-width: 100%;
@@ -374,16 +378,48 @@ section::after {
 
 @media (max-width: 576px) {
     .full-screen-header {
+        display: block;
+        text-align: center;
         font-size: 1.2rem;
-        padding: 0 2%;
+        padding: 20% 2%;
     }
 
     .header-content {
-        max-width: 300px;
-        padding: 0;
+        display: block;
+        width: 100%;
+        position: relative;
+        padding: 2%;
+        text-align: left; /* Maintain left alignment */
     }
 
+    .header-content .tagline {
+        font-size: 1.5em;
+        margin-top: 150px;
+    }
+    
+    .header-content .small-tagline {
+        font-size: 0.8em;
+        margin-top: 0.2em;
+    }
+
+    .wrapped-figure{
+        display: block;
+        width: 100%;
+        position: relative;
+        align-self: right;
+        padding-top: 35%;
+        padding-left: 45%;
+        bottom: 0; 
+        left: 0; 
+    }
+
+    .wrapped-figure img{
+        max-width: 200%;
+    }
     .fixed-bottom-right {
+        display: block;
+        width: 100%;
+        position: relative;
         font-size: 0.7rem;
         bottom: 0;
         right: 0;
