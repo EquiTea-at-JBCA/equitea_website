@@ -19,7 +19,10 @@ header, footer {
     position: relative; /* Ensure proper stacking */
 }
 
-.full-screen-header {
+.mobile-header{
+    display: none;
+}
+.full-screen-header.desktop-header{
     position: relative;
     width: 100%;
     height: 100vh;
@@ -47,12 +50,14 @@ header, footer {
 }
 
 .header-content .tagline {
+    font-style: "Candara";
     font-size: 1.5em;
-    margin-top: 250px;
+    margin-top: 5%;
 }
 
 .header-content .small-tagline {
-    font-size: 0.4em;
+    color: #b9a5e9;
+    font-size: 0.5em;
     margin-top: 0.2em;
 }
 .fixed-bottom-right {
@@ -120,7 +125,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #A098B5;
+    color: #cfccd8;
 }
 
 /* Change the default color of all hyperlinks */
@@ -244,19 +249,22 @@ footer {
 }
 
 .wrapped-figure {
-    align-self: flex-end;
+    align-self: right;
     position: absolute;
-    bottom: 40px;
-    right: 40px;
+    /* bottom: 40px; */
+    right: 5%;
+    /* top: 10px; */
     margin: 0;
     z-index: 2;
     max-width: 25%;
+    justify-content: center;
     animation: fadeInLeft 1s ease-in-out;
 }
 
 .wrapped-figure img {
     object-fit: cover;
-    align-items: bottom;
+    align-items: center;
+    justify-content: center;
     opacity: 100%;
     z-index: 2;
     max-width: 100%;
@@ -334,10 +342,13 @@ section::after {
 }
 
 /* Responsive Styles */
-@media (max-width: 1200px) {
+@media (max-width: 1080px) {
     .full-screen-header {
         font-size: 2.5rem;
         padding: 0 5%;
+    }
+    .full-screen-header.desktop-header{
+        display:flex;
     }
 
     .header-content {
@@ -355,6 +366,9 @@ section::after {
     .full-screen-header {
         font-size: 2rem;
         padding: 0 5%;
+    }
+    .full-screen-header.desktop-header{
+        display:flex;
     }
 
     .header-content {
@@ -384,7 +398,9 @@ section::after {
         font-size: 1.5rem;
         padding: 0 5%;
     }
-
+    .full-screen-header.desktop-header{
+        display:flex;
+    }
     .pquote {
         font-size: 1.2em; /* Smaller font on smaller screens */
         padding: 15px;
@@ -413,30 +429,45 @@ section::after {
     }
 }
 
-@media (max-width: 576px) {
-    .full-screen-header {
-        display: block;
-        text-align: center;
+@media (max-width: 414px) {
+    .desktop-header{
+        display: none;
+    }
+    .full-screen-header.mobile-header {
+        display: flex;
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px;
+        background: url('path_to_your_background_image.jpg') no-repeat center center/cover;
         font-size: 1.2rem;
-        padding: 20% 2%;
+        align-items: center;
+        text-align: left;
+        color: white;
+        /* padding: 15% 5%; */
+        box-sizing: border-box;
     }
 
-    .header-content {
+    .header-content {   
         display: block;
         width: 100%;
         position: relative;
-        padding: 2%;
+        padding: 20% 5%;
         text-align: left; /* Maintain left alignment */
     }
 
     .header-content .tagline {
         font-size: 1.5em;
-        margin-top: 150px;
+        margin-top: 10%;
+        margin-bottom: 8%;
     }
     
     .header-content .small-tagline {
         font-size: 0.8em;
-        margin-top: 0.2em;
+        margin-top: 2%;
+        padding-bottom: 0;
     }
 
     .pquote {
@@ -446,12 +477,15 @@ section::after {
     }
 
     .wrapped-figure{
+        order: 1;
         display: block;
         width: 100%;
-        position: relative;
-        align-self: right;
-        padding-top: 29%;
-        padding-left: 45%;
+        position: absolute;
+        align-self: top;
+        padding-top: 5%;
+        padding-right: 30%;
+        padding-left: 5%;
+        padding-bottom: 5%;
         bottom: 0; 
         left: 0; 
     }
