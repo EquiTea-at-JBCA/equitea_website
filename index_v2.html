@@ -38,6 +38,7 @@
     <a href="#calendar">Event Calendar</a>
     <a href="#archive"> Event Archive</a>
     <a href="#team">Our Team</a>
+    <a href="#form">Speaker Suggestions</a>
 </nav>
 
 <main>
@@ -53,8 +54,12 @@
                             </p>
                         </blockquote>
                     </aside>
-                    <p>EquiTea is a monthly forum dedicated to promoting equality, diversity, and inclusivity within the academic community of the sciences. Our goal is to create a welcoming space for discussions and events that foster a greater understanding of challenges faced by our colleagues hailing from a variety of minority communities and spread awareness of what we can do to help.</p>
+                    <p>EquiTea is a monthly forum dedicated to promoting equity, diversity, and inclusivity within the academic community of the sciences. Equity recognizes that each person has different circumstances, and allocates the exact resources and opportunities needed to reach an equal outcome while equality simply provides a level playing field (<a href="https://www.internationalwomensday.com/Missions/18707/Equality-versus-Equity-What-s-the-difference-as-we-EmbraceEquity-for-IWD-2023-and-beyond"> Source </a>). Our goal is to create a welcoming space for discussions and events that foster a greater understanding of challenges faced by our colleagues hailing from a variety of minority communities and spread awareness of what we can do to help.</p>
                     <p>We hope you will join us every <b>first Thursday</b> of every month at <b>11:00</b> in the <b>Lovell room</b> at <b>Alan Turing Building</b> to engage with eminent speakers talk about their varied experiences followed by a lively discussion.</p>
+                    <img src="assets/pasted-image-0.png" alt="equality vs equity">
+                    <figcaption>
+                        <i class="photo-credit">Image source: Robert Wood Johnson Foundation</i>
+                    </figcaption>
                 </div>
             </div>
         </section>
@@ -72,12 +77,12 @@
                     <p><b>Katrine Glasscock</b><br><i>(she/her)</i><br>Student Lead</p>
                 </div>
                 <div class="team-member">
-                    <img src="path_to_image.jpg" alt="Dr. Aishrilla Mazumdar">
-                    <p><b>Dr. Aishrilla Mazumdar</b><br><i>()</i><br>Member</p>
-                </div>
-                <div class="team-member">
                     <img src="assets/sohini_dutta.jpeg" alt="Sohini Dutta">
                     <p><b>Sohini Dutta</b><br><i>(she/her)</i><br>Member/Web Mistress</p>
+                </div>
+                <div class="team-member">
+                    <img src="path_to_image.jpg" alt="Dr. Aishrilla Mazumdar">
+                    <p><b>Dr. Aishrilla Mazumdar</b><br><i>()</i><br>Member</p>
                 </div>
                 <div class="team-member">
                     <img src="path_to_image.jpg" alt="Prof. Tim O'Brien">
@@ -88,7 +93,6 @@
                     <p><b>Lily Magnus</b><br><i>()</i><br>Member</p>
                 </div>
             </div>
-        
         <!-- Past events -->
         </section>
         <section id="archive">
@@ -132,25 +136,27 @@
         <section id="upcoming-events">
             <h2>Upcoming Events</h2>
             <ul class="upcoming-events">
-                <li><b>Title:</b> The Role of Astronomy in Social Justice <br>
+                <p><i>TBA. <br> Stay Tuned!</i></p>
+                <!-- <li><b>Title:</b> The Role of Astronomy in Social Justice <br>
                     <b>Date:</b> August 20, 2024 <br>
                     <b>Description:</b> A talk by Dr. Jane Doe exploring the intersection of astronomy and social justice.
-                </li>
+                </li> -->
             </ul>
         </section>
 
         <!-- Event calendar -->
         <section id="calendar">
             <h2>Event Calendar</h2>
-            <!-- <iframe src="https://calendar.google.com/calendar/embed?src=6o0hsbutgar6cu02jou466c810%40group.calendar.google.com&ctz=Europe%2FLondon" style="border: 0" width="300" height="300" frameborder="0" scrolling="no"></iframe> -->
-            <iframe src="https://calendar.google.com/calendar/embed?src=6o0hsbutgar6cu02jou466c810%40group.calendar.google.com&ctz=Europe%2FLondon" style="border: 0" max-width=auto height=300 frameborder="0" scrolling="yes"></iframe>
+            <div class="calendar-container">
+                <iframe src="https://calendar.google.com/calendar/embed?src=6o0hsbutgar6cu02jou466c810%40group.calendar.google.com&ctz=Europe%2FLondon" style="border: 0" max-width=auto height=300 frameborder="0" scrolling="yes"></iframe>
+            </div>
         </section>
         <section id="resources">
             <h2>Useful Resources</h2>
             <p>For more information on Equality, Diversity, and Inclusivity, visit the following resources:</p>
             <ul class="resources">
-                <li><a href="https://example.com/resource1">Resource 1</a></li>
-                <li><a href="https://example.com/resource2">Resource 2</a></li>
+                <li><a href="https://www.internationalwomensday.com/Missions/18707/Equality-versus-Equity-What-s-the-difference-as-we-EmbraceEquity-for-IWD-2023-and-beyond">Equality versus Equity: What's the difference as we #EmbraceEquity for IWD 2023 and beyond?</a></li>
+                <!-- <li><a href="https://example.com/resource2">Resource 2</a></li> -->
             </ul>
         </section>
 
@@ -159,6 +165,10 @@
             <p> Fill out this quick <a href="https://forms.office.com/e/qcwPwe5Mk6"> form </a> to send us your speaker suggestions! </p> <br>
         </section>
     </aside>
+
+    <div class="event-description-box" id="eventDescriptionBox">
+        <!-- Description will be dynamically inserted here -->
+    </div>
 </main>
 
 
@@ -179,6 +189,38 @@
         content.forEach(el => observer.observe(el));
     });
 </script>
+
+<script>
+   document.querySelectorAll('.calendar-event').forEach(event => {
+    event.addEventListener('mouseover', function (e) {
+        let descriptionBox = document.getElementById('eventDescriptionBox');
+        descriptionBox.style.display = 'block';
+        descriptionBox.innerHTML = this.getAttribute('data-description');
+
+        let x = e.pageX;
+        let y = e.pageY;
+
+        // Adjust if pop-up goes beyond the right edge of the screen
+        if (x + descriptionBox.offsetWidth > window.innerWidth) {
+            x = window.innerWidth - descriptionBox.offsetWidth - 10; // 10px padding
+        }
+
+        // Adjust if pop-up goes beyond the bottom edge of the screen
+        if (y + descriptionBox.offsetHeight > window.innerHeight) {
+            y = window.innerHeight - descriptionBox.offsetHeight - 10; // 10px padding
+        }
+
+        descriptionBox.style.left = x + 'px';
+        descriptionBox.style.top = y + 'px';
+    });
+
+    event.addEventListener('mouseleave', function () {
+        let descriptionBox = document.getElementById('eventDescriptionBox');
+        descriptionBox.style.display = 'none';
+    });
+});
+</script>
+
 </body>
 </html>
  
