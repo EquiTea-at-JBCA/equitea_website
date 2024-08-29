@@ -159,15 +159,11 @@ nav a:visited{
 
 .nav-mobile{
     display: none;
-    top: 0;
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    background-color: #2C3860;
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.nav-desktop{
+    display: sticky;
+}
 /* Change the default color of all hyperlinks */
 a {
     color: #2C3860; /* Replace with your desired color */
@@ -400,7 +396,13 @@ section::after {
         max-width: 600px;
         padding: 0 15px;
     }
+    .nav-desktop{
+        display: sticky;
+    }
 
+    .nav-mobile{
+        display: none;
+    }
     .fixed-bottom-right {
         font-size: 1.2rem;
         z-index: 9999;
@@ -417,6 +419,13 @@ section::after {
         display:flex;
     }
 
+    .nav-desktop{
+        display: sticky;
+    }
+
+    .nav-mobile{
+        display: none;
+    }
     .header-content {
         max-width: 500px;
         padding: 0 10px;
@@ -446,6 +455,13 @@ section::after {
     }
     .full-screen-header.desktop-header{
         display:flex;
+    }
+    .nav-desktop{
+        display: sticky;
+    }
+
+    .nav-mobile{
+        display: none;
     }
     .pquote {
         font-size: 1.0em; /* Smaller font on smaller screens */
