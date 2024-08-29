@@ -33,15 +33,18 @@
     </div>
 </header>
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#calendar">Event Calendar</a>
-    <a href="#archive"> Event Archive</a>
-    <a href="#team">Our Team</a>
-    <a href="#form">Speaker Suggestions</a>
-    <div class="nav-toggle" id="nav-toggle">
-        &#9776;
-    </div>
+<nav class="nav-desktop">
+        <a href="#about">About</a>
+        <a href="#calendar">Event Calendar</a>
+        <a href="#archive"> Event Archive</a>
+        <a href="#team">Our Team</a>
+        <a href="#form">Speaker Suggestions</a>
+</nav>
+
+<nav class="nav-mobile">
+        <a href="#upcoming-events">Upcoming Events</a>
+        <a href="#calendar">Event Calendar</a>
+        <a href="#form">Speaker Suggestions</a>
 </nav>
 
 <main>
@@ -223,7 +226,12 @@
     });
 });
 </script>
-
+<script>
+    // JavaScript to toggle the menu
+    document.getElementById('nav-toggle').addEventListener('click', function() {
+      document.getElementById('nav-menu').classList.toggle('show');
+    });
+  </script>
 </body>
 </html>
  
