@@ -461,8 +461,8 @@ section::after {
     }
 }
 
-@media (max-width: 414px) {
-    .desktop-header{
+@media (max-width: 500px) {
+    .full-screen-header.desktop-header{
         display: none;
     }
     .full-screen-header.mobile-header {
@@ -472,9 +472,8 @@ section::after {
         min-height: 100vh;
         flex-direction: column;
         justify-content: space-between;
-        padding: 20px;
         background: url('path_to_your_background_image.jpg') no-repeat center center/cover;
-        font-size: 1.2rem;
+        font-size: 1.2em;
         align-items: center;
         text-align: left;
         color: white;
@@ -485,13 +484,14 @@ section::after {
     .header-content {   
         display: block;
         width: 100%;
+        font-size: 1.2em;
         position: relative;
-        padding: 20% 5%;
+        padding: 25% 5%;
         text-align: left; /* Maintain left alignment */
     }
 
     .header-content .tagline {
-        font-size: 1.5em;
+        /* font-size: 0.6em; */
         margin-top: 10%;
         margin-bottom: 8%;
     }
@@ -517,7 +517,7 @@ section::after {
         padding-top: 5%;
         padding-right: 30%;
         padding-left: 5%;
-        padding-bottom: 5%;
+        padding-bottom: 10%;
         bottom: 0; 
         left: 0; 
     }
