@@ -52,6 +52,20 @@ padding: 0 20px;
     font-size: 0.5em; /* Adjust this value to control the tagline size */
     margin-top: 60px; /* Add some space above the tagline */
 }
+
+/* .overlay-img {
+    position: absolute;
+    top: 20px; 
+    right: 20px;
+    z-index: 9999; 
+}
+
+.overlay-img img {
+    width: 150px; 
+    height: auto;
+    z-index: 9999;
+  } */
+
 .fixed-bottom-right {
     position: absolute;
     z-index: 999;
