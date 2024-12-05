@@ -115,6 +115,45 @@ header, footer {
     border-radius: 5px;
 }
 
+/* toggle button */
+/* button.collapsible {
+    background-color: #4e4e50; 
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    transition: background-color 0.4s ease; 
+    border-radius: 5px;
+} */
+
+/* button.collapsible:hover {
+    background-color: #343a40; 
+} */
+
+/* button.collapsible.active {
+    background-color: #6c757d;
+} */
+
+/* div.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+    margin-bottom: 10px;
+    border-radius: 5px;
+} */
+
+/* div.content.show {
+    max-height: none; 
+    transition: max-height 0.2s ease-in;
+} */
+
+
 /* Optional: Style when hovering over the event */
 .calendar-event:hover .event-description-box {
     display: flex;
