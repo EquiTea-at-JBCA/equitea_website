@@ -1,6 +1,8 @@
 body {
     font-family: 'Lato', sans-serif;
     background-image: url('assets/masters-backpage-nologo-pink-darker.jpg');
+    background-repeat: repeat;
+    background-size: cover;
     color: black;
     margin: 0;
     padding: 0;
