@@ -117,45 +117,6 @@ header, footer {
     border-radius: 5px;
 }
 
-/* toggle button */
-/* button.collapsible {
-    background-color: #4e4e50; 
-    color: white;
-    cursor: pointer;
-    padding: 10px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 18px;
-    transition: background-color 0.4s ease; 
-    border-radius: 5px;
-} */
-
-/* button.collapsible:hover {
-    background-color: #343a40; 
-} */
-
-/* button.collapsible.active {
-    background-color: #6c757d;
-} */
-
-/* div.content {
-    padding: 0 18px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-    background-color: #f1f1f1;
-    margin-bottom: 10px;
-    border-radius: 5px;
-} */
-
-/* div.content.show {
-    max-height: none; 
-    transition: max-height 0.2s ease-in;
-} */
-
-
 /* Optional: Style when hovering over the event */
 .calendar-event:hover .event-description-box {
     display: flex;
@@ -260,9 +221,11 @@ section h2 {
     padding-bottom: 5px;
     margin-bottom: 15px;
     color: #2C3860;
-    transition: color 0.3s ease-in-out;
+    transition: background-color 0.3s ease;
 }
-
+.highlight{
+    background-color:#A098B5;
+}
 section h2:hover {
     color: #2C3860;
 }
@@ -302,6 +265,64 @@ section h2:hover {
 
 .past-talks li, .upcoming-events li {
     margin-bottom: 10px;
+}
+
+/* Style for the collapsible title button */
+.collapsible {
+    background-color: #37417B; !important
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: bold;
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+}
+
+.collapsible:hover {
+    background-color: hsl(257, 16%, 65%); /* Darken button on hover */
+}
+
+.collapsible.head{
+    background-color: transparent;
+    width: 100%;
+    color: white;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.collapsible.head:hover{
+    background-color: transparent;
+    width: 100%;
+    color: white;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+  /* Style for the content area (hidden by default) */
+.collapsible.content {
+    padding: 0 18px;
+    display: none; !important
+    overflow: hidden;
+    /* background-color: #A098B5; */
+    background-color: white;
+    font-size: 16px;
+    border-left: 2px solid #37417B;
+    border-top:  2px solid #37417B;
+    border-bottom: 2px solid #37417B;
+    border-right: 2px solid #37417B;
+    padding-top: 5px;
+}
+
+  /* Active state for the button when open */
+.active, .collapsible:focus {
+    background-color: #A098B5;
+}
+.collapsible.content{
+    transition: max-height 0.2s ease-out;
 }
 
 footer {
