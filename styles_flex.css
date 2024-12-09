@@ -221,7 +221,7 @@ section h2 {
     padding-bottom: 5px;
     margin-bottom: 15px;
     color: #2C3860;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.7s ease-in-out;
 }
 .highlight{
     background-color:#A098B5;

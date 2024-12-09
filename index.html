@@ -298,16 +298,17 @@
     anchor.addEventListener('click', function(event) {
         // Get the target section ID from the link's href
         const targetId = this.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(`#${targetId} h2`);
+        const targetSection = document.querySelector(`#${targetId}`);
+        const targetElement = targetSection ? targetSection.querySelector('h2') : null;
 
         if (targetElement) {
             // Highlight the section header
             targetElement.style.backgroundColor = '#A098B5'; // Highlight color
 
-            // Remove the highlight after 500 milliseconds
+            // Remove the highlight after n milliseconds
             setTimeout(() => {
                 targetElement.style.backgroundColor = ''; // Revert to original color
-            }, 500);
+            }, 700);
         }
         })
     });
