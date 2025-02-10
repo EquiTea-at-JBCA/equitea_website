@@ -269,7 +269,7 @@ section h2:hover {
 
 /* Style for the collapsible title button */
 .collapsible {
-    background-color: #37417B !important
+    background-color: #2C3860;
     cursor: pointer;
     padding: 18px;
     width: 100%;
@@ -280,6 +280,7 @@ section h2:hover {
     font-weight: bold;
     box-sizing: border-box;
     transition: background-color 0.3s;
+    color: white;
 }
 
 .collapsible:hover {
@@ -305,21 +306,21 @@ section h2:hover {
   /* Style for the content area (hidden by default) */
 .collapsible.content {
     padding: 0 18px;
-    display: none !important;
+    display: none;
     overflow: hidden;
-    /* background-color: #A098B5; */
     background-color: white;
     font-size: 16px;
-    border-left: 2px solid #37417B;
-    border-top:  2px solid #37417B;
-    border-bottom: 2px solid #37417B;
-    border-right: 2px solid #37417B;
+    border: 2px solid #2C3860;
     padding-top: 5px;
 }
 
   /* Active state for the button when open */
 .active, .collapsible:focus {
-    background-color: #A098B5;
+    background-color: #2C3860;
+}
+
+.collapsible.content.show {
+    display: block !important;
 }
 .collapsible.content{
     transition: max-height 0.2s ease-out;
