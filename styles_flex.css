@@ -269,7 +269,7 @@ section h2:hover {
 
 /* Style for the collapsible title button */
 .collapsible {
-    background-color: #37417B; !important
+    background-color: #37417B !important
     cursor: pointer;
     padding: 18px;
     width: 100%;
@@ -305,7 +305,7 @@ section h2:hover {
   /* Style for the content area (hidden by default) */
 .collapsible.content {
     padding: 0 18px;
-    display: none; !important
+    display: none !important;
     overflow: hidden;
     /* background-color: #A098B5; */
     background-color: white;
