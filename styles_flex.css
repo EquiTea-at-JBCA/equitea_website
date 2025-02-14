@@ -299,64 +299,6 @@ section h2:hover {
     overflow: hidden;
   }
 
-/* Style for the collapsible title button */
-.collapsible {
-    background-color: #2C3860;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    font-size: 18px;
-    font-weight: bold;
-    box-sizing: border-box;
-    transition: background-color 0.3s;
-    color: white;
-}
-
-.collapsible:hover {
-    background-color: hsl(257, 16%, 65%); /* Darken button on hover */
-}
-
-.collapsible.head {
-    background-color: transparent;
-    width: 100%;
-    color: white;
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-.collapsible.head:hover {
-    background-color: transparent;
-    width: 100%;
-    color: white;
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-/* Style for the content area (hidden by default) */
-.collapsible + .content {
-    padding: 0 18px;
-    max-height: 0;  /* Initially hidden */
-    overflow: hidden;
-    background-color: white;
-    font-size: 16px;
-    border: 2px solid #2C3860;
-    padding-top: 5px;
-    transition: max-height 0.3s ease-out;
-}
-
-/* Active state for the button when open */
-.active, .collapsible:focus {
-    background-color: #2C3860;
-}
-
-/* Style for when the content is shown */
-.collapsible + .content.show {
-    max-height: 1000px;  /* Set a reasonable max-height */
-}
-
 .active + .content {
     max-height: 100px;  /* Adjust this to test content visibility */
     padding: 10px;
