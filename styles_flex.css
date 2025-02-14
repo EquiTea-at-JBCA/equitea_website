@@ -2,7 +2,8 @@ body {
     font-family: 'Lato', sans-serif;
     background-image: url('assets/masters-backpage-nologo-pink-darker.jpg');
     background-repeat: repeat;
-    background-size: cover;
+    /* background-size: cover; */
+    background-attachment: fixed;
     color: black;
     margin: 0;
     padding: 0;
@@ -266,7 +267,6 @@ section h2:hover {
 .past-talks li, .upcoming-events li {
     margin-bottom: 10px;
 }
-
 /* Style for the collapsible title button */
 .collapsible {
     background-color: #2C3860;
@@ -287,7 +287,7 @@ section h2:hover {
     background-color: hsl(257, 16%, 65%); /* Darken button on hover */
 }
 
-.collapsible.head{
+.collapsible.head {
     background-color: transparent;
     width: 100%;
     color: white;
@@ -295,7 +295,7 @@ section h2:hover {
     padding-bottom: 0;
 }
 
-.collapsible.head:hover{
+.collapsible.head:hover {
     background-color: transparent;
     width: 100%;
     color: white;
@@ -303,27 +303,31 @@ section h2:hover {
     padding-bottom: 0;
 }
 
-  /* Style for the content area (hidden by default) */
-.collapsible.content {
+/* Style for the content area (hidden by default) */
+.collapsible + .content {
     padding: 0 18px;
-    display: none;
+    max-height: 0;  /* Initially hidden */
     overflow: hidden;
     background-color: white;
     font-size: 16px;
     border: 2px solid #2C3860;
     padding-top: 5px;
+    transition: max-height 0.3s ease-out;
 }
 
-  /* Active state for the button when open */
+/* Active state for the button when open */
 .active, .collapsible:focus {
     background-color: #2C3860;
 }
 
-.collapsible.content.show {
-    display: block !important;
+/* Style for when the content is shown */
+.collapsible + .content.show {
+    max-height: 1000px;  /* Set a reasonable max-height */
 }
-.collapsible.content{
-    transition: max-height 0.2s ease-out;
+
+.active + .content {
+    max-height: 100px;  /* Adjust this to test content visibility */
+    padding: 10px;
 }
 
 footer {

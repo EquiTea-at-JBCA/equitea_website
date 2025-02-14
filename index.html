@@ -130,8 +130,9 @@
         <section id="archive">
             <h2>Event Archive</h2>
             <!---2025 events-->
-            <button class="collapsible"> <div class="collapsible head">2025</div> </button>
-            <div class="collapsible content">
+            <!-- <button class="collapsible"> <div class="collapsible head">2025</div> </button> -->
+            <h3>2025</h3>
+            <div class="content">
                 <h3>&#8226 Carers in STEMM: Like Butter Spread Too Thin On Toast</h3>
                 <p class="tx-ind"><b><i>Date and Time: </i></b> 11:00 - 12:00, Thursday, 6 February 2025 </p>
                 <p class="tx-ind"><b><i>Speaker: </i></b> Laura Wolz, Presidential Fellow at Jodrell Bank Center for Astrophysics, The University of Manchester</p>
@@ -142,8 +143,9 @@
                 More information can be found on our website: <a href="https://carersinstemm.co.uk/"> https://carersinstemm.co.uk/</a> </p>
             </div>
             <!--2024 events-->
-                    <button class="collapsible"> <div class="collapsible head">2024</div> </button>
-                    <div class="collapsible content">
+                    <!-- <button class="collapsible"> <div class="collapsible head">2024</div> </button> -->
+                    <h3>2024</h3>
+                    <div class="content">
                         <h3>&#8226 Supporting transgender individuals in Academia</h3>
                         <p class="tx-ind"><b><i>Date and Time: </i></b> 11:00 - 12:00, Thursday, 5 December 2024 </p>
                         <p class="tx-ind"><b><i>Speaker: </i></b> Tobias Russell, PhD student, Jodrell Bank Centre for Astrophysics, University of Manchester  </p>
@@ -184,8 +186,9 @@
             </div>
 
             <!---2023 events-->
-            <button class="collapsible"><div class="collapsible head">2023</div></button>
-            <div class="collapsible content">
+            <!-- <button class="collapsible"><div class="collapsible head">2023</div></button> -->
+            <h3>2023</h3>
+            <div class="content">
                 <h3>&#8226 Outreach and Widening Participation in the Faculty</h3>
                 <p class="txt-ind"><b><i>Date and Time:</i></b>11:00-12:00, Thursday, 7th December 2023</p>
                 <p class="txt-ind"><b><i>Speaker:</i></b> Emma Nichols</p>
@@ -213,8 +216,9 @@
             </div>
 
             <!---2022 events-->
-            <button class="collapsible"><div class="collapsible head">2022</div></button>
-            <div class="collapsible content">
+            <!-- <button class="collapsible"><div class="collapsible head">2022</div></button> -->
+            <h3>2022</h3>
+            <div class="content">
                 <h3>&#8226 Inclusive Conferencing</h3>
                 <p class="tx-ind"><b><i>Date and Time:</i></b>Thursday, 1st December 2022</p>
                 <p class="tx-ind"><b><i>Speaker:</i></b>Emily Henderson and James Burford</p>
@@ -362,8 +366,8 @@ document.querySelectorAll('.calendar-event').forEach(event => {
     document.getElementById('nav-menu').classList.toggle('show');
     });
 </script> -->
-
 <script>
+document.addEventListener('DOMContentLoaded', function() {
     var coll = document.getElementsByClassName("collapsible");
     var i;
 
@@ -371,11 +375,17 @@ document.querySelectorAll('.calendar-event').forEach(event => {
         coll[i].addEventListener("click", function() {
             this.classList.toggle("active");
             var content = this.nextElementSibling;
-            content.classList.toggle("show");
+            
+            // Toggle max-height for smooth transition
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
         });
     }
+});
 </script>
-
 
 </body>
 </html>
