@@ -131,7 +131,7 @@
             <h2>Event Archive</h2>
             <!---2025 events-->
             <button class="collapsible"> <div class="collapsible head">2025</div> </button>
-            <div class="content">
+            <div class="collapsible content">
                 <h3>&#8226 Carers in STEMM: Like Butter Spread Too Thin On Toast</h3>
                 <p class="tx-ind"><b><i>Date and Time: </i></b> 11:00 - 12:00, Thursday, 6 February 2025 </p>
                 <p class="tx-ind"><b><i>Speaker: </i></b> Laura Wolz, Presidential Fellow at Jodrell Bank Center for Astrophysics, The University of Manchester</p>
@@ -143,7 +143,7 @@
             </div>
             <!--2024 events-->
                     <button class="collapsible"> <div class="collapsible head">2024</div> </button>
-                    <div class="content">
+                    <div class="collapsible content">
                         <h3>&#8226 Supporting transgender individuals in Academia</h3>
                         <p class="tx-ind"><b><i>Date and Time: </i></b> 11:00 - 12:00, Thursday, 5 December 2024 </p>
                         <p class="tx-ind"><b><i>Speaker: </i></b> Tobias Russell, PhD student, Jodrell Bank Centre for Astrophysics, University of Manchester  </p>
@@ -185,7 +185,7 @@
 
             <!---2023 events-->
             <button class="collapsible"><div class="collapsible head">2023</div></button>
-            <div class="content">
+            <div class="collapsible content">
                 <h3>&#8226 Outreach and Widening Participation in the Faculty</h3>
                 <p class="txt-ind"><b><i>Date and Time:</i></b>11:00-12:00, Thursday, 7th December 2023</p>
                 <p class="txt-ind"><b><i>Speaker:</i></b> Emma Nichols</p>
@@ -214,7 +214,7 @@
 
             <!---2022 events-->
             <button class="collapsible"><div class="collapsible head">2022</div></button>
-            <div class="content">
+            <div class="collapsible content">
                 <h3>&#8226 Inclusive Conferencing</h3>
                 <p class="tx-ind"><b><i>Date and Time:</i></b>Thursday, 1st December 2022</p>
                 <p class="tx-ind"><b><i>Speaker:</i></b>Emily Henderson and James Burford</p>
@@ -364,32 +364,16 @@ document.querySelectorAll('.calendar-event').forEach(event => {
 </script> -->
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var coll = document.getElementsByClassName("collapsible");
-        var i;
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
 
-        for (i = 0; i < coll.length; i++) {
-            coll[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                
-                // If the content exists and has the content class
-                if (content && content.classList.contains("content")) {
-                    if (content.style.display === "block") {
-                        content.style.display = "none";
-                    } else {
-                        content.style.display = "block";
-                    }
-                }
-            });
-        }
-
-        // Initialize all content sections to be hidden
-        var contents = document.getElementsByClassName("content");
-        for (i = 0; i < contents.length; i++) {
-            contents[i].style.display = "none";
-        }
-    });
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            content.classList.toggle("show");
+        });
+    }
 </script>
 
 
