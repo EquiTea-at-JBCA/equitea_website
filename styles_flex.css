@@ -629,3 +629,18 @@ section::after {
         height: 60px;
     }
 }
+
+/* === Archive page layout tweaks === */
+
+/* Let the archive section use the full content width */
+#archive {
+    width: 100%;
+}
+
+/* Make accordion headers and panels span the full text width */
+#archive .accordion,
+#archive .panel {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
