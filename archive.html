@@ -276,5 +276,20 @@
     <p>&copy; 2024 EquiTea at JBCA. All Rights Reserved.</p>
 </footer>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const acc = document.getElementsByClassName("accordion");
+  for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      const panel = this.nextElementSibling;
+      if (!panel) return;
+
+      panel.style.display = (panel.style.display === "block") ? "none" : "block";
+    });
+  }
+});
+</script>
+
 </body>
 </html>
