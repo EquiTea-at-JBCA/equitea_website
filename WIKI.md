@@ -2,6 +2,13 @@
 
 # Getting Started
 
+<aside>
+💡
+
+**Note**: Please exercise proper version control and maintain code hygiene.
+
+</aside>
+
 The EquiTea website files are stored and updated here: https://github.com/EquiTea-at-JBCA/equitea_website.git
 
 You’ll need access to the EquiTea organisation on Git Hub to access and edit this repo.
