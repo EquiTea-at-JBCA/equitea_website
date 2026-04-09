@@ -587,23 +587,22 @@ section::after {
         margin: 10px 0;
     }
 
-    .wrapped-figure{
-        order: 1;
-        display: block;
-        width: 100%;
-        position: absolute;
-        align-self: flex-start;
-        padding-top: 5%;
-        padding-right: 25%;
-        padding-left: 25%;
-        padding-bottom: 10%;
-        bottom: 0; 
-        left: 0; 
+    .wrapped-figure {
+    order: 1;                
+    display: block;
+    position: relative;      
+    width: auto;
+    align-self: center;
+    padding: 0 5% 5%;
     }
 
-    .wrapped-figure img{
-        max-width: 200%;
+    .wrapped-figure img {
+        max-width: 150px;         
+        width: 40vw;        
+        display: block;
+        margin: 0 auto;
     }
+
     .fixed-bottom-right {
         display: block;
         width: 100%;
